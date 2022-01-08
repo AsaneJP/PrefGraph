@@ -18,7 +18,7 @@ export const PrimaryTitle: VFC<Props> = (props) => {
 }
 
 const Title = styled.h1`
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
   color: #1a202c;
 `
@@ -26,6 +26,7 @@ const Title = styled.h1`
 const Div = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 `
 
 const BorderLine = styled.span`

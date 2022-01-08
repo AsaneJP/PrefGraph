@@ -48,6 +48,7 @@ export const CheckBox: VFC<PrefList> = (props) => {
 
 const Div = styled.div`
   width: 100px;
+  padding: 5px;
 `
 
 const Input = styled.input`

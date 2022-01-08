@@ -10,12 +10,12 @@ const HeaderContent = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  height: 70px;
   width: 100%;
   background-color: #333333;
   h1 {
     color: #f5faff;
-    font-size: large;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 `

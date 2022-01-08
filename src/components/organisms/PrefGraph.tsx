@@ -42,13 +42,6 @@ export const PrefGraph: VFC = () => {
     credits: {
       enabled: false,
     },
-    legend: {
-      layout: 'vertical',
-      align: 'right',
-      x: 0,
-      verticalAlign: 'top',
-      floating: true,
-    },
     series: graphData.length === 0 ? [{ type: 'line', name: '都道府県名', data: [] }] : graphData,
   }
 
