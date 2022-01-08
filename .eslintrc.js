@@ -29,6 +29,7 @@ module.exports = {
     ".eslintrc.js"
   ],
   rules: {
+    'no-restricted-syntax': 'off',
     'no-console': "off",
     'react/prop-types': "off",
     'no-nested-ternary': "off",
