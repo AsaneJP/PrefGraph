@@ -1,18 +1,20 @@
 import axios from 'axios'
-import { useState, useEffect, VFC } from 'react'
+import { useEffect, VFC } from 'react'
+import { useRecoilState } from 'recoil'
 import styled from 'styled-components'
+import { PrefListState } from '../../globalState/atoms/PrefListState'
 
 import { Prefectures } from '../../types/api/Prefectures'
-import { PrefList } from '../../types/PrefList'
 import { CheckBox } from '../atoms/CheckBox'
+import { PrimaryTitle } from '../atoms/PrimaryTitle'
 
 export const PrefCheckField: VFC = () => {
-  const [prefList, setPrefList] = useState<Array<PrefList>>([])
+  const [prefList, setPrefList] = useRecoilState(PrefListState)
 
   useEffect(() => {
     axios
       .get<Prefectures>('https://opendata.resas-portal.go.jp/api/v1/prefectures', {
-        headers: { 'X-API-KEY': 'dZrxYBK2oivqxTL7IwNKkDyIuvVMhFFP6usuRl4H' },
+        headers: { 'X-API-KEY': 'YFP5CPpHX4YZJPHhaWtUbVtNoL8heMOWtewZ5or5' },
       })
       .then((res) => {
         setPrefList(res.data.result)
@@ -20,14 +22,17 @@ export const PrefCheckField: VFC = () => {
       .catch((error) => {
         console.log(error)
       })
-  }, [])
+  }, [setPrefList])
 
   return (
-    <Div>
-      {prefList.map((pref) => (
-        <CheckBox prefCode={pref.prefCode} prefName={pref.prefName} />
-      ))}
-    </Div>
+    <>
+      <PrimaryTitle>都道府県</PrimaryTitle>
+      <Div>
+        {prefList.map((pref) => (
+          <CheckBox prefCode={pref.prefCode} prefName={pref.prefName} key={pref.prefCode} />
+        ))}
+      </Div>
+    </>
   )
 }
 
