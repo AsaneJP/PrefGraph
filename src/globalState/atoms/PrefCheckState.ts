@@ -1,7 +1,7 @@
 import { atom } from 'recoil'
-import { PrefList } from '../../types/PrefList'
+import { PrefData } from '../../types/PrefData'
 
-export const PrefCheckState = atom<Array<PrefList>>({
+export const PrefCheckState = atom<Array<PrefData>>({
   key: 'PrefCheckState',
   default: [],
 })

@@ -1,4 +1,4 @@
-import { useState, VFC } from 'react'
+import { VFC } from 'react'
 import { PrefCheckField } from '../organisms/PrefCheckField'
 import { PrefGraph } from '../organisms/PrefGraph'
 
