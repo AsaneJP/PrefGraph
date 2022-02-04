@@ -39,14 +39,14 @@ export const CheckBox: VFC<PrefList> = (props) => {
   }
 
   return (
-    <Div>
+    <Container>
       <Input type="checkbox" id={`${prefCode}`} onChange={onChangePref} />
       <Label htmlFor={`${prefCode}`}>{prefName}</Label>
-    </Div>
+    </Container>
   )
 }
 
-const Div = styled.div`
+const Container = styled.div`
   width: 100px;
   padding: 5px;
 `

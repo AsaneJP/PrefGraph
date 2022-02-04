@@ -10,9 +10,9 @@ export const PrimaryTitle: VFC<Props> = (props) => {
   return (
     <div>
       <Title>{children}</Title>
-      <Div>
+      <Container>
         <BorderLine />
-      </Div>
+      </Container>
     </div>
   )
 }
@@ -23,7 +23,7 @@ const Title = styled.h1`
   color: #1a202c;
 `
 
-const Div = styled.div`
+const Container = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 30px;

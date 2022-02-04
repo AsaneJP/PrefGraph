@@ -27,16 +27,16 @@ export const PrefCheckField: VFC = () => {
   return (
     <>
       <PrimaryTitle>都道府県</PrimaryTitle>
-      <Div>
+      <Container>
         {prefList.map((pref) => (
           <CheckBox prefCode={pref.prefCode} prefName={pref.prefName} key={pref.prefCode} />
         ))}
-      </Div>
+      </Container>
     </>
   )
 }
 
-const Div = styled.div`
+const Container = styled.div`
   width: 80%;
   margin: 20px auto;
   display: flex;
